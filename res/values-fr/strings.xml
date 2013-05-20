@@ -1843,9 +1843,9 @@
     <string name="nfc_polling_mode_screen_locked">Écran allumé, verrouillé</string>
     <string name="nfc_polling_mode_screen_unlocked">Écran allumé, déverrouillé (Par défaut)</string>
     
-    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
+    <!-- **XYLON ACTIVITIES MODIFICATIONS STARTS** -->
     
-    <string name="xylon_extras">Outils XYE</string>
+    <string name="xylon_extras">Outils</string>
     <string name="mod_version">Version de la Rom</string>
     <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
@@ -1856,13 +1856,15 @@
     <string name="press_color_to_apply">Appuyer sur la couleur pour valider.</string>
     <string name="set">Ok</string>
 
-    <string name="title_about">À propos de Xylon</string>
+    <string name="about_settings_key">À propos</string>
+    <string name="title_about">À propos de la Rom</string>
     <string name="team">La Team</string>
     <string name="contributors">Collaborateurs</string>
-    <string name="xylon_website_title">Site web de Xylon</string>
-    <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
+    <string name="ultimatum">Ultimatum Kang</string>
+    <string name="ultimatum_website_title">Site web de la Rom</string>
+    <string name="ultimatum_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
 
-    <string name="dxy_settings_title">Dark Xylon</string>
+    <string name="dark_settings_title">Mode sombre</string>
     <string name="misc">Divers</string>
     <string name="headset_category_title">Casque audio</string>
 
@@ -1931,7 +1933,7 @@
     <string name="safe_headset_volume_summary">Mettre en garde l\'utilisateur contre les volumes sonores élevés lors de la première utilisation du casque</string>
 
     <string name="waiver_title">ATTENTION</string>
-    <string name="waiver_body">Le changement de ce paramètre peut être interdit par les lois de votre gouvernement ou état.\n\nEn sélectionnant \'OK\' ci-dessous, vous reconnaissez avoir pris connaissance de cet avertissement, et vous dégagez l\'équipe XYE et ses contributeurs de toutes responsabilités et de toutes obligations juridiques.</string>
+    <string name="waiver_body">Le changement de ce paramètre peut être interdit par les lois de votre gouvernement ou état.\n\nEn sélectionnant \'OK\' ci-dessous, vous reconnaissez avoir pris connaissance de cet avertissement, et vous dégagez notre équipe et ses contributeurs de toutes responsabilités et de toutes obligations juridiques.</string>
 
     <string name="display_category_wakeup_options_title">Sortie de veille</string>
     <string name="pref_volume_wake_title">Éveil par boutons volume</string>
@@ -2051,8 +2053,8 @@
     <string name="sms_security_check_limit_summary">Afficher un message d\'alerte pour prevenir qu\'une application envoie des messages SMS trop fréquemment. Limite actuelle : %d messages en 15 minutes</string>
     <string name="sms_security_check_limit_default">100 (Par défaut)</string>
 
-    <string name="anonymous_statistics_title">Statistiques Xylon</string>
-    <string name="anonymous_statistics_summary">Aidez l\'équipe XYE en participant à l\'envoi de données anonymes pour comptabiliser le nombre d\'installations par type d\'appareil</string>
+    <string name="anonymous_statistics_title">Statistiques de la Rom</string>
+    <string name="anonymous_statistics_summary">Aidez notre équipe en participant à l\'envoi de données anonymes pour comptabiliser le nombre d\'installations par type d\'appareil</string>
 
     <string name="light_sensor_current_value">Valeur actuelle du capteur de lumière\u00A0: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Niveaux d\'éclairage automatique</string>
@@ -2077,5 +2079,5 @@
     <string name="power_notifications_ringtone_title">Sonnerie émise</string>
     <string name="power_notifications_ringtone_silent">Aucune</string>
 
-    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
+    <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
