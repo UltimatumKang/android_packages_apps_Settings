@@ -659,6 +659,7 @@
     <string name="wifi_tether_configure_ap_text" msgid="61237027772641155">"设置 Wi-Fi 热点"</string>
     <string name="wifi_tether_configure_subtext" msgid="1927454307836232128">"<xliff:g id="NETWORK_SSID">%1$s</xliff:g> <xliff:g id="NETWORK_SECURITY">%2$s</xliff:g> 便携式 Wi-Fi 热点"</string>
     <string name="wifi_tether_configure_ssid_default" msgid="8467525402622138547">"Android 热点"</string>
+    <!-- Sound and alerts settings -->
     <string name="display_settings_title" msgid="1708697328627382561">"显示"</string>
     <string name="sound_settings" msgid="5534671337768745343">"声音"</string>
     <string name="ringtone_title" msgid="5379026328015343686">"手机铃声"</string>
@@ -1335,6 +1336,7 @@
     <string name="accessibility_script_injection_security_warning_summary" msgid="7706858873495386310">"您要允许应用安装来自 Google 的脚本，以便于您浏览这些应用的网页内容吗？"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"没有提供说明。"</string>
     <string name="settings_button" msgid="3006713718908152930">"设置"</string>
+    <!-- Activity title for App Fuel Gauge summary -->
     <string name="power_usage_summary_title" msgid="7190304207330319919">"电池"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"耗电情况"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"无法获取电池使用数据。"</string>
@@ -1862,6 +1864,7 @@
     <string name="build_date">编译日期</string>
     <string name="dxy_settings_title">深色 Xylon</string>
     
+    <string name="dark_settings_title">深色UI</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">颜色选择器</string>
@@ -1880,7 +1883,7 @@
 
     <!-- Customisation -->
     <string name="other_cat">其它设置</string>
-    <string name="xylon_extras">常规设置</string>
+    <string name="ultimatum_extras">多功能设置</string>
     <string name="lockscreen_stub">锁屏界面</string>
     <string name="misc">杂项</string>
 
@@ -2108,6 +2111,12 @@
     <string name="notification_shade_dim_title">模糊通知色彩</string>
     <string name="notification_shade_dim_summary">下拉栏开启时启用特效</string>
 
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">启动媒体扫描器的行为</string>
+    <string name="media_scanner_on_boot_enabled">扫描媒体</string>
+    <string name="media_scanner_on_boot_ask">请扫描（通知）</string>
+    <string name="media_scanner_on_boot_disabled">不扫描媒体</string>
+
     <!-- Wireless display -->
     <string name="pref_wifi_disable_hdcp_title">跳过HDCP协商</string>
     <string name="pref_wifi_disable_hdcp_summary">试试这个选项，如果你可以连接但没有任何输出</string>
@@ -2118,43 +2127,11 @@
     <string name="use_custom_app_summary">使用自定义应用而不是最近应用的对话框</string>
     <string name="group_applications">应用程序</string>
 
-    <!-- Screen security - Screen security   -->
-    <string name="screen_security_category">屏幕安全保护</string>
-    <string name="screen_security_title">屏幕锁定</string>
-    <string name="screen_security_summary">查看或者更改锁屏设置、延迟和超时设定。</string>
-    <string name="additional_options_title">附加设定</string>
-    <string name="unlock_menu_unlock_title">菜单键解锁</string>
-    <string name="unlock_menu_unlock_summary">按下菜单键来解锁</string>
-    <string name="unlock_home_unlock_title">Home键解锁</string>
-    <string name="unlock_home_unlock_summary">按下Home键来解锁</string>
-    <string name="unlock_quick_unlock_control_title">快速解锁</string>
-    <string name="unlock_quick_unlock_control_summary">当输入正确的PIN/密码时自动解锁</string>
-
     <!--- Sms security limit -->
     <string name="app_security_title">应用程序安全性</string>
     <string name="sms_security_check_limit_title">SMS消息限制</string>
     <string name="sms_security_check_limit_summary">限制程序在没有得到许可之前30分钟内只能发送%d条短信</string>
     <string name="sms_security_check_limit_default">100（默认）</string>
-
-    <!-- Slide lock delay -->
-    <string name="delay_and_timeout_title">延迟和超时</string>
-    <string name="slide_lock_delay_title">延迟锁屏</string>
-    <string name="slide_lock_timeout_delay_title">超时后延迟</string>
-    <string name="slide_lock_screenoff_delay_title">关屏后延迟</string>
-    <string name="slide_lock_delay_none">无</string>
-    <string name="slide_lock_delay_1s">1 秒</string>
-    <string name="slide_lock_delay_5s">5 秒</string>
-    <string name="slide_lock_delay_10s">10 秒</string>
-    <string name="slide_lock_delay_15s">15 秒</string>
-    <string name="slide_lock_delay_30s">30 秒</string>
-    <string name="slide_lock_delay_1m">1 分钟</string>
-    <string name="slide_lock_delay_5m">5 分钟</string>
-    <string name="slide_lock_delay_10m">10 分钟</string>
-    <string name="slide_lock_delay_30m">30 分钟</string>
-
-    <!-- Lock screen vibrate settings -->
-    <string name="lockscreen_vibrate_enabled_title">震动</string>
-    <string name="lockscreen_vibrate_enabled_head">解锁时震动</string>
 
     <!-- XYStats -->
     <string name="anonymous_statistics_title">Xylon统计</string>
@@ -2194,5 +2171,7 @@
     <!-- Sound settings, power notifications label for ringtone == none -->
     <string name="power_notifications_ringtone_silent">静音</string>
 
+    <!-- Permissions Management -->
+    <string name="permissions_settings_title">权限管理</string>
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
