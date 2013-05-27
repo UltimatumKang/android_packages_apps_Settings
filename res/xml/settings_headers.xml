@@ -128,8 +128,8 @@
         android:id="@+id/customize_section"
         android:title="@string/header_category_customization" />
 
-    <header android:id="@+id/ukg_settings"
-            android:title="@string/ultimatum_extras"
+    <header android:id="@+id/xy_settings"
+            android:title="@string/xylon_extras"
             android:icon="@drawable/ic_tab_selected_all" >
         <intent
                 android:action="android.intent.action.MAIN"
@@ -253,7 +253,7 @@
 
         <!-- About Rom -->
         <header
-            android:id="@+id/about_ukg"
+            android:id="@+id/about_xy"
             android:fragment="com.android.settings.about.About"
             android:icon="@drawable/ic_settings_multiuser"
             android:title="@string/title_about" />

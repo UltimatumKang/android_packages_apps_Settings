@@ -56,7 +56,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
     private static final String KEY_COPYRIGHT = "copyright";
-    //private static final String KEY_XY_STATS = "xystats";
     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
@@ -178,9 +177,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         // Remove regulatory information if not enabled.
         removePreferenceIfBoolFalse(KEY_REGULATORY_INFO,
                 R.bool.config_show_regulatory_info);
-
-        // Don't display Stats if the app itself isn't installed
-        // removePreferenceIfPackageNotInstalled(findPreference(KEY_XY_STATS));
     }
 
     @Override

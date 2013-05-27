@@ -26,9 +26,6 @@
         </PreferenceScreen>
 -->
 
-        <!--PreferenceScreen android:key="xylon_logo"
-                          android:layout="@layout/logo_row" /-->
-
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 
@@ -76,15 +73,6 @@
                 android:title="@string/settings_safetylegal_title">
             <intent android:action="android.settings.SAFETY" />
         </PreferenceScreen>
-
-        <!--PreferenceScreen
-                android:key="xystats"
-                android:title="@string/anonymous_statistics_title"
-                android:summary="@string/anonymous_statistics_summary">
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.fuss.stats"
-                    android:targetClass="com.fuss.stats.MainActivity" />
-        </PreferenceScreen-->
 
         <!-- Contributors -->
         <!-- 

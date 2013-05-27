@@ -4468,7 +4468,7 @@
     <!-- **XYLON ACTIVITIES MODIFICATIONS STARTS** -->
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">UKG buildversion</string>
+    <string name="mod_version">Xylon version</string>
     <string name="mod_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
@@ -4492,16 +4492,17 @@
 
     <!-- About -->
     <string name="about_settings_key">About</string>
-    <string name="title_about">Ultimatum</string>
+    <string name="title_about">Xylon</string>
     <string name="team">The Team</string>
     <string name="contributors">Contributors</string>
-    <string name="ultimatum">Ultimatum Kang</string>
-    <string name="ultimatum_website_title">Ultimatum\'s Website</string>
-    <string name="ultimatum_website_summary">Find all the latest experiments and news here.</string>
-    <string name="ultimatum_source_title">Ultimatum\'s Source</string>
-    <string name="ultimatum_source_summary">We are fully open source. You can always check out our movements at github or bitbucket</string>
+    <string name="xylon">Xylon</string>
+    <string name="xylon_website_title">Xylon\'s Website</string>
+    <string name="xylon_website_summary">Find all the latest experiments and news here.</string>
+    <string name="xylon_source_title">Xylon\'s Source</string>
+    <string name="xylon_source_summary">We are fully open source. You can always check out our movements at github or bitbucket</string>
     <string name="github_daxxmax">http://github.com/daxxmax</string>
     <string name="github_arzbhatia">http://github.com/arzbhatia</string>
+    <string name="github_chaosagent">http://github.com/chaosagent</string>
     <string name="github_dorilife">http://github.com/dorilife</string>
     <string name="github_fuss132">http://github.com/fuss132</string>
     <string name="github_psafx">http://github.com/psafx</string>
@@ -4518,7 +4519,7 @@
 
     <!-- Customisation -->
     <string name="other_cat">Other Settings</string>
-    <string name="ultimatum_extras">uTool</string>
+    <string name="xylon_extras">uTool</string>
     <string name="lockscreen_stub">Lock Screen</string>
     <string name="misc">Misc</string>
 
@@ -4768,7 +4769,7 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="sms_security_check_limit_default">100 (Default)</string>
 
     <!-- XYStats -->
-    <string name="anonymous_statistics_title">Ultimatum statistics</string>
+    <string name="anonymous_statistics_title">Xylon statistics</string>
     <string name="anonymous_statistics_summary">Help make us better by opting into anonymous statistics reporting</string>
 
     <!-- Automatic brightness customization -->

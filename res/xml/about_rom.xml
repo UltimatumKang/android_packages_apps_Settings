@@ -3,9 +3,12 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:xy="http://schemas.android.com/apk/res/com.android.settings">
 
+        <!--PreferenceScreen android:key="xylon_logo"
+                          android:layout="@layout/logo_row" /-->
+
 	<!--PreferenceCategory
-		android:key="ultimatum"
-		android:title="@string/ultimatum">
+		android:key="xylon"
+		android:title="@string/xylon">
 
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="null"
@@ -29,6 +32,12 @@
 			xy:nameDev="Arz Bhatia"
 			xy:twitterHandle="arzbhatia"
 			xy:githubLink="@string/github_arzbhatia" />
+
+		<com.android.settings.about.widgets.DeveloperPreference
+                        android:title="David Hou"
+                        xy:nameDev="chaosagent"
+                        xy:twitterHandle=""
+                        xy:githubLink="@string/github_chaosagent" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="David Vidal"
