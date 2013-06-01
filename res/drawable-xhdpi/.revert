@@ -1,0 +1,8 @@
+for x in *.9.png
+do
+	git checkout -- $x
+done
+for x in $(cat .invalid)
+do
+	git checkout -- $x
+done
