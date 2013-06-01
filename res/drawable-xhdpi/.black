@@ -1,4 +1,0 @@
-for x in *
-do
-	convert $x -fill "#ff333333" -opaque "#ff000000" $x
-done
