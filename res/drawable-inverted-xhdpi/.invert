@@ -1,0 +1,26 @@
+#out='cd .'
+#first="convert "
+#second=" -negate "
+#and=" && "
+for x in *
+do
+#	ssh dev@127.0.0.1 cd android/xy_jb2/packages/apps/Settings/res/drawable-xhdpi && convert $x -negate $x
+	curr="$first$x$second$x"
+	out+="$and$curr"
+done
+for x in $(*.9.png)
+do
+#        cp ../../../drawable-xhdpi/$x ./
+#	curr="$first$x$second$x"
+#        out+="$and$curr"
+	echo ''
+done
+for x in $(cat .invalid)
+do
+#	cp ../../../drawable-xhdpi/$x ./
+#	curr="$first$x$second$x" 
+#        out+="$and$curr"
+	echo ''
+	git checkout -- $x
+done
+echo $out
