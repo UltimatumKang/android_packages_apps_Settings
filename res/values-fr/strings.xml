@@ -1864,7 +1864,7 @@
     <string name="xylon_website_title">Site web de la Rom</string>
     <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
 
-    <string name="dark_settings_title">Mode sombre</string>
+    <string name="dark_settings_title">IU sombre</string>
     <string name="misc">Divers</string>
     <string name="headset_category_title">Casque audio</string>
 
@@ -2059,11 +2059,12 @@
     <string name="light_sensor_current_value">Valeur actuelle du capteur de lumière\u00A0: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Niveaux d\'éclairage automatique</string>
     <string name="auto_brightness_adjust_button">Ajuster</string>
+    <string name="auto_brightness_close_button">Fermer</string>
     <string name="auto_brightness_reset_button">Réinitialiser</string>
-    <string name="auto_brightness_lux_dialog_title">Plage de luminosité ambiante</string>
     <string name="auto_brightness_split_dialog_title">Modifier le niveau de luminosité</string>
-    <string name="auto_brightness_start_lux">Plage de début (lux)</string>
-    <string name="auto_brightness_end_lux">Plage de fin (lux)</string>
+    <string name="auto_brightness_level_dialog_title">Configurer les niveaux</string>
+    <string name="auto_brightness_lux">Luminosité ambiante (lux)</string>
+    <string name="auto_brightness_backlight">Luminosité de l\'écran (%)</string>
     <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux\u00A0?</string>
     <string name="auto_brightness_reset_confirmation">Tous les niveaux de luminosité seront réinitialisés à leurs réglages par défaut.</string>
     <string name="auto_brightness_split_lux_format">Position de coupure (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> lux)</string>
@@ -2071,6 +2072,38 @@
     <string name="auto_brightness_menu_edit_lux">Modifier plage de luminosité ambiante</string>
     <string name="auto_brightness_menu_split">Modifier position de coupure</string>
     <string name="auto_brightness_menu_remove">Supprimer</string>
+    <string name="auto_brightness_preview">Aperçu</string>
+    <string name="auto_brightness_preview_dialog_title">Aperçu de la luminosité</string>
+    <string name="auto_brightness_help_dialog_title">Aide</string>
+    <string name="auto_brightness_help_text"><b>Comment la luminosité est-elle calculée ?</b>
+\n\n
+The brightness curve is calculated by performing a <i>cubic spline interpolation</i>
+on a given number of <i>control points</i>. It\'s not a \'bucket-type\' calculation where
+screen brightness will stay constant for a specific range of ambient brightness. That way,
+small changes in ambient brightness do not cause a large jump in screen brightness; however,
+it can be a little hard to predict the exact consequences of changing control points.\n
+To help with that, a preview of the calculated curve can be examined. Please note that the
+preview shows the curve in <i>logarithmic</i> scale, so that all control points can be shown
+distinctively. When using a linear scale, it wouldn\'t be possible to distinguish the tendentially
+more important control points in the lower range of ambient brightness.
+\n\n
+<b>Comment éditer les courbes de luminosité ?</b>
+\n\n
+Each line in the brightness list corresponds to one <i>control point</i> of the
+brightness curve. To edit the brightness level of the point, you can use the slider
+present in each line. The screen brightness will be changed accordingly while touching
+the slider to give a preview of the light level.\n
+Additional options are available by long-pressing a line. By selecting \'Ajuster\', you can
+both edit the ambient brightness level of the control point as well as manually input the
+desired screen brightness. Selecting \'Modifier\' allows you to to duplicate one line into
+two in order to insert additional control points. \'Supprimer\' deletes the selected line.
+    </string>
+    <string name="auto_brightness_sensitivity_title">Sensibilité d'ajustement</string>
+    <string name="auto_brightness_sensitivity_verylow">Très petite</string>
+    <string name="auto_brightness_sensitivity_low">Petite</string>
+    <string name="auto_brightness_sensitivity_medium">Moyenne</string>
+    <string name="auto_brightness_sensitivity_high">Haute</string>
+    <string name="auto_brightness_sensitivity_veryhigh">Très haute</string>
     
     <string name="power_notifications_category_title">Son dû au chargeur</string>
     <string name="power_notifications_enable_title">Activé</string>
