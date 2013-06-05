@@ -1884,7 +1884,7 @@
     <string name="group_applications">Applications</string>
 
     <string name="swap_volume_buttons_title">Inversion des boutons volume</string>
-    <string name="swap_volume_buttons_summary">Inversions des boutons de volume lorsque l\'écran est tourné.</string>
+    <string name="swap_volume_buttons_summary">Inversion des boutons de volume lorsque l\'écran est tourné.</string>
 
     <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_enabled">Activée:</string>
@@ -2098,7 +2098,7 @@ both edit the ambient brightness level of the control point as well as manually 
 desired screen brightness. Selecting \'Modifier\' allows you to to duplicate one line into
 two in order to insert additional control points. \'Supprimer\' deletes the selected line.
     </string>
-    <string name="auto_brightness_sensitivity_title">Sensibilité d'ajustement</string>
+    <string name="auto_brightness_sensitivity_title">Sensibilité d\'ajustement</string>
     <string name="auto_brightness_sensitivity_verylow">Très petite</string>
     <string name="auto_brightness_sensitivity_low">Petite</string>
     <string name="auto_brightness_sensitivity_medium">Moyenne</string>
