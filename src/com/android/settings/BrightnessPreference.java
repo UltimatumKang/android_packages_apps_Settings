@@ -35,10 +35,13 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.android.settings.cyanogenmod.AutoBrightnessCustomizeDialog;
 
@@ -53,6 +56,8 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
 
     private SeekBar mSeekBar;
     private CheckBox mCheckBox;
+    private TextView mAutoSensitivityTitle;
+    private Spinner mAutoSensitivity;
 
     private int mOldBrightness;
     private int mOldAutomatic;
@@ -63,6 +68,8 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
     private int mCurBrightness = -1;
 
     private boolean mRestoredOldState;
+
+    private AutoBrightnessCustomizeDialog mCustomizeDialog;
 
     private static final int SEEK_BAR_RANGE = 10000;
 
@@ -119,8 +126,7 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
             adjustButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Dialog d = new AutoBrightnessCustomizeDialog(getContext());
-                    d.show();
+                    showCustomizeDialog(null);
                 }
             });
         }
@@ -147,14 +153,40 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
         mSeekBar.setProgress(mOldBrightness);
 
         mCheckBox = (CheckBox)view.findViewById(R.id.automatic_mode);
+        mAutoSensitivityTitle = (TextView) view.findViewById(R.id.automatic_sensitivity_title);
+        mAutoSensitivity = (Spinner) view.findViewById(R.id.automatic_sensitivity);
+
         if (mAutomaticAvailable) {
             mCheckBox.setOnCheckedChangeListener(this);
             mOldAutomatic = getBrightnessMode(0);
             mAutomaticMode = mOldAutomatic == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
             mCheckBox.setChecked(mAutomaticMode);
             mSeekBar.setEnabled(!mAutomaticMode || USE_SCREEN_AUTO_BRIGHTNESS_ADJUSTMENT);
+            mAutoSensitivityTitle.setEnabled(mAutomaticMode);
+            mAutoSensitivity.setEnabled(mAutomaticMode);
+
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                    R.array.auto_brightness_sensitivity_entries,
+                    android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mAutoSensitivity.setAdapter(adapter);
+
+            float currentSensitivity = Settings.System.getFloat(getContext().getContentResolver(),
+                    Settings.System.AUTO_BRIGHTNESS_RESPONSIVENESS, 1.0f);
+            int currentSensitivityInt = (int) (currentSensitivity * 100);
+            int[] sensitivityValues = getContext().getResources().getIntArray(
+                    R.array.auto_brightness_sensitivity_values);
+
+            for (int i = 0; i < sensitivityValues.length; i++) {
+                if (sensitivityValues[i] == currentSensitivityInt) {
+                    mAutoSensitivity.setSelection(i);
+                    break;
+                }
+            }
         } else {
             mSeekBar.setEnabled(true);
+            mAutoSensitivityTitle.setVisibility(View.GONE);
+            mAutoSensitivity.setVisibility(View.GONE);
         }
         mSeekBar.setOnSeekBarChangeListener(this);
     }
@@ -177,6 +209,8 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
                 : Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
         mSeekBar.setProgress(getBrightness());
         mSeekBar.setEnabled(!mAutomaticMode || USE_SCREEN_AUTO_BRIGHTNESS_ADJUSTMENT);
+        mAutoSensitivityTitle.setEnabled(mAutomaticMode);
+        mAutoSensitivity.setEnabled(mAutomaticMode);
         setBrightness(mSeekBar.getProgress(), false);
         updateAutoBrightnessCustomizeButton();
     }
@@ -240,6 +274,16 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
 
         if (positiveResult) {
             setBrightness(mSeekBar.getProgress(), true);
+
+            int selection = mAutoSensitivity.getSelectedItemPosition();
+            if (selection >= 0) {
+                int[] sensitivityValues = getContext().getResources().getIntArray(
+                        R.array.auto_brightness_sensitivity_values);
+                float sensitivity = 0.01f * sensitivityValues[selection];
+
+                Settings.System.putFloat(resolver,
+                        Settings.System.AUTO_BRIGHTNESS_RESPONSIVENESS, sensitivity);
+            }
         } else {
             restoreOldState();
         }
@@ -305,6 +349,26 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
                 Settings.System.SCREEN_BRIGHTNESS_MODE, mode);
     }
 
+    private void showCustomizeDialog(Bundle state) {
+        if (mCustomizeDialog != null && mCustomizeDialog.isShowing()) {
+            return;
+        }
+
+        mCustomizeDialog = new AutoBrightnessCustomizeDialog(getContext());
+        if (state != null) {
+            mCustomizeDialog.onRestoreInstanceState(state);
+        }
+        mCustomizeDialog.show();
+    }
+
+    @Override
+    public void onActivityDestroy() {
+        super.onActivityDestroy();
+        if (mCustomizeDialog != null) {
+            mCustomizeDialog.dismiss();
+        }
+    }
+
     @Override
     protected Parcelable onSaveInstanceState() {
         final Parcelable superState = super.onSaveInstanceState();
@@ -317,6 +381,11 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
         myState.oldAutomatic = mOldAutomatic == 1;
         myState.oldProgress = mOldBrightness;
         myState.curBrightness = mCurBrightness;
+        myState.autoSensitivitySelection = mAutoSensitivity.getSelectedItemPosition();
+        myState.customizeDialogShown = mCustomizeDialog != null && mCustomizeDialog.isShowing();
+        if (myState.customizeDialogShown) {
+            myState.customizeDialogState = mCustomizeDialog.onSaveInstanceState();
+        }
 
         // Restore the old state when the activity or dialog is being paused
         restoreOldState();
@@ -338,6 +407,11 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
         setMode(myState.automatic ? 1 : 0);
         setBrightness(myState.progress, false);
         mCurBrightness = myState.curBrightness;
+        mAutoSensitivity.setSelection(myState.autoSensitivitySelection);
+
+        if (myState.customizeDialogShown) {
+            showCustomizeDialog(myState.customizeDialogState);
+        }
     }
 
     private static class SavedState extends BaseSavedState {
@@ -347,6 +421,9 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
         int progress;
         int oldProgress;
         int curBrightness;
+        int autoSensitivitySelection;
+        boolean customizeDialogShown;
+        Bundle customizeDialogState;
 
         public SavedState(Parcel source) {
             super(source);
@@ -355,6 +432,9 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
             oldAutomatic = source.readInt() == 1;
             oldProgress = source.readInt();
             curBrightness = source.readInt();
+            autoSensitivitySelection = source.readInt();
+            customizeDialogShown = source.readInt() == 1;
+            customizeDialogState = source.readBundle();
         }
 
         @Override
@@ -365,6 +445,9 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
             dest.writeInt(oldAutomatic ? 1 : 0);
             dest.writeInt(oldProgress);
             dest.writeInt(curBrightness);
+            dest.writeInt(autoSensitivitySelection);
+            dest.writeInt(customizeDialogShown ? 1 : 0);
+            dest.writeBundle(customizeDialogState);
         }
 
         public SavedState(Parcelable superState) {
