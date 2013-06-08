@@ -194,6 +194,10 @@
     <style name="KeyguardAppWidgetItem">
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="RequestTheme" parent="RequestThemeDark" />
+    <style name="Superuser" parent="SuperuserDark" />
+    <style name="SuperuserActivity" parent="SuperuserDarkActivity" />
     
     <style name="Settings" parent="android:Theme.Holo" />
     
