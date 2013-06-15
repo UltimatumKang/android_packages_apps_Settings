@@ -62,6 +62,12 @@
 			xy:nameDev="AirOne"
 			xy:twitterHandle="airone70500"
 			xy:githubLink="@string/github_airone" />
+
+		<com.android.settings.about.widgets.DeveloperPreference
+			android:title="aznrice2k4"
+			xy:nameDev="aznrice2k4"
+			xy:twitterHandle="aznrice2k4"
+			xy:githubLink="@string/github_aznrice2k4" />
 			
 	</PreferenceCategory>
 

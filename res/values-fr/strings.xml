@@ -1890,7 +1890,6 @@
     <string name="display_rotation_enabled">Activée:</string>
     <string name="display_rotation_disabled">Désactivée</string>
     <string name="display_rotation_unit">degré(s)</string>
-    <string name="display_lockscreen_rotation_title">Inclure l\'écran de verrouillage</string>
     <string name="display_rotation_category_title">Modes de rotation</string>
     <string name="display_rotation_0_title">0 degré</string>
     <string name="display_rotation_90_title">90 degrés</string>
@@ -2072,8 +2071,8 @@
     <string name="auto_brightness_menu_edit_lux">Modifier plage de luminosité ambiante</string>
     <string name="auto_brightness_menu_split">Modifier position de coupure</string>
     <string name="auto_brightness_menu_remove">Supprimer</string>
-    <string name="auto_brightness_preview">Aperçu</string>
-    <string name="auto_brightness_preview_dialog_title">Aperçu de la luminosité</string>
+    <string name="auto_brightness_preview">Aperçu (courbe)</string>
+    <string name="auto_brightness_preview_dialog_title">Évolution de la luminosité</string>
     <string name="auto_brightness_help_dialog_title">Aide</string>
     <string name="auto_brightness_help_text"><b>Comment la luminosité est-elle calculée ?</b>
 \n\n
@@ -2126,6 +2125,11 @@ two in order to insert additional control points. \'Supprimer\' deletes the sele
     <string name="animation_grow_shrink_bottom">S\'agrandir (bas)</string>
     <string name="animation_grow_shrink_left">S\'agrandir (gauche)</string>
     <string name="animation_grow_shrink_right">S\'agrandir (droite)</string>
+
+    <string name="app_halo_label_black">Liste noire de HALO</string>
+    <string name="app_halo_label_white">Liste blanche de HALO</string>
+
+    <string name="confirm_delete_apn">Cet APN va être supprimé.</string>
 
     <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
