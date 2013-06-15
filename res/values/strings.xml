@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
 ** Copyright 2007 The Android Open Source Project
@@ -4501,10 +4501,9 @@
     <string name="xylon">Xylon</string>
     <string name="xylon_website_title">Xylon\'s Website</string>
     <string name="xylon_website_summary">Find all the latest experiments and news here.</string>
-    <string name="xylon_source_title">Xylon\'s Source</string>
-    <string name="xylon_source_summary">We are fully open source. You can always check out our movements at github or bitbucket</string>
+    <string name="donate_daxxmax">http://forum.xda-developers.com/donatetome.php?u=1216319</string>
+    <string name="github_xylon">http://github.com/UltimatumKang</string>
     <string name="github_daxxmax">http://github.com/daxxmax</string>
-    <string name="github_arzbhatia">http://github.com/arzbhatia</string>
     <string name="github_chaosagent">http://github.com/chaosagent</string>
     <string name="github_dorilife">http://github.com/dorilife</string>
     <string name="github_fuss132">http://github.com/fuss132</string>
@@ -4520,11 +4519,17 @@
     <string name="github_sabermod">http://github.com/SaberMod</string>
     <string name="github_rascarlo">http://github.com/rascarlo</string>
     <string name="github_baked">http://github.com/TeamBAKED</string>
-
+    <string name="google_xylon">http://plus.google.com/u/0/communities/113055388128726029211</string>
+    <string name="google_daxxmax">http://plus.google.com/u/0/115569516936113574583</string>
+    <string name="google_airone">http://plus.google.com/u/0/111446809292030784251</string>
+    <string name="google_aznrice2k4">http://plus.google.com/u/0/108575607716140781016</string>
+    <string name="google_chaosagent">http://plus.google.com/u/0/114031780765081155797</string>
+    <string name="google_psafx">http://plus.google.com/u/0/104597897323998940994</string>
+    <string name="google_dorilife">http://plus.google.com/u/0/101802680433715978472</string>
+    
     <!-- Customisation -->
     <string name="other_cat">Other Settings</string>
     <string name="xylon_extras">uTool</string>
-    <string name="lockscreen_stub">Lock Screen</string>
     <string name="misc">Misc</string>
 
     <!--- Volume key cursor control -->

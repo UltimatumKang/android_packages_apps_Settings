@@ -90,8 +90,8 @@
     </declare-styleable>
 
     <declare-styleable name="ListPreferenceMultiSelect">
-    	<attr format="string" name="checkAll" />
-    	<attr format="string" name="separator" />
+        <attr format="string" name="checkAll" />
+        <attr format="string" name="separator" />
     </declare-styleable>
 
     <declare-styleable name="DeveloperPreference">
@@ -99,6 +99,7 @@
         <attr name="nameDev" format="string"/>
         <attr name="donateLink" format="string" />
         <attr name="githubLink" format="string" />
+        <attr name="googleLink" format="string" />
     </declare-styleable>
 
     <declare-styleable name="ImageListPreference">

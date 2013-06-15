@@ -1,4 +1,3 @@
-
 package com.android.settings.about.widgets;
 
 import android.content.Context;
@@ -38,6 +37,7 @@ public class DeveloperPreference extends Preference {
     private static final String TAG = "DeveloperPreference";
 
     private ImageView twitterButton;
+    private ImageView googleButton;
     private ImageView donateButton;
     private ImageView githubButton;
     private ImageView photoView;
@@ -46,6 +46,7 @@ public class DeveloperPreference extends Preference {
 
     private String nameDev;
     private String twitterName;
+    private String googleLink;
     private String donateLink;
     private String githubLink;
 
@@ -55,6 +56,7 @@ public class DeveloperPreference extends Preference {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DeveloperPreference);
         nameDev = a.getString(R.styleable.DeveloperPreference_nameDev);
         twitterName = a.getString(R.styleable.DeveloperPreference_twitterHandle);
+        googleLink = a.getString(R.styleable.DeveloperPreference_googleLink);
         donateLink = a.getString(R.styleable.DeveloperPreference_donateLink);
         githubLink = a.getString(R.styleable.DeveloperPreference_githubLink);
         a.recycle();
@@ -67,6 +69,7 @@ public class DeveloperPreference extends Preference {
         View layout = View.inflate(getContext(), R.layout.dev_card, null);
 
         twitterButton = (ImageView) layout.findViewById(R.id.twitter_button);
+        googleButton = (ImageView) layout.findViewById(R.id.google_button);
         donateButton = (ImageView) layout.findViewById(R.id.donate_button);
         githubButton = (ImageView) layout.findViewById(R.id.github_button);
         devName = (TextView) layout.findViewById(R.id.name);
@@ -109,6 +112,22 @@ public class DeveloperPreference extends Preference {
             githubButton.setOnClickListener(openGithub);
         } else {
             githubButton.setVisibility(View.GONE);
+        }
+        
+        if (googleLink != null) {
+            final OnClickListener openGoogle = new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Uri googleURL = Uri.parse(googleLink);
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, googleURL);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    getContext().startActivity(intent);
+                }
+            };
+
+            googleButton.setOnClickListener(openGoogle);
+        } else {
+            googleButton.setVisibility(View.GONE);
         }
 
         if (twitterName != null) {
