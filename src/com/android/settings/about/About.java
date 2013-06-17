@@ -24,7 +24,7 @@ public class About extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.about_rom);
-        // mSiteUrl = findPreference("xylon_website");
+        mSiteUrl = findPreference("xylon_website");
 
         PreferenceGroup devsGroup = (PreferenceGroup) findPreference("team");
         ArrayList<Preference> devs = new ArrayList<Preference>();
@@ -44,9 +44,9 @@ public class About extends SettingsPreferenceFragment {
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        //if (preference == mSiteUrl) {
-        //    launchUrl("http://xylon.androidvenue.com");
-        //}
+        if (preference == mSiteUrl) {
+            launchUrl("http://ultimatumdev.org");
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
@@ -56,5 +56,7 @@ public class About extends SettingsPreferenceFragment {
         getActivity().startActivity(donate);
         Intent github = new Intent(Intent.ACTION_VIEW, uriUrl);
         getActivity().startActivity(github);
+        Intent google = new Intent(Intent.ACTION_VIEW, uriUrl);
+        getActivity().startActivity(google);
     }
 }
