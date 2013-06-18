@@ -56,7 +56,5 @@ public class About extends SettingsPreferenceFragment {
         getActivity().startActivity(donate);
         Intent github = new Intent(Intent.ACTION_VIEW, uriUrl);
         getActivity().startActivity(github);
-        Intent google = new Intent(Intent.ACTION_VIEW, uriUrl);
-        getActivity().startActivity(google);
     }
 }
