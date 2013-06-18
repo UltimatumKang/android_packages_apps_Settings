@@ -99,7 +99,6 @@
         <attr name="nameDev" format="string"/>
         <attr name="donateLink" format="string" />
         <attr name="githubLink" format="string" />
-        <attr name="googleLink" format="string" />
     </declare-styleable>
 
     <declare-styleable name="ImageListPreference">
