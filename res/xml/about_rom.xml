@@ -19,7 +19,6 @@
 			android:title="Xylon"
 			xy:nameDev="UltimatumDev"
 			xy:twitterHandle=""
-			xy:googleLink="@string/google_xylon"
 			xy:donateLink="@string/donate_daxxmax"
 			xy:githubLink="@string/github_xylon"/>
                           
@@ -33,21 +32,18 @@
 			android:title="Daniel MM"
 			xy:nameDev="Daniel MM"
 			xy:twitterHandle="daxinonito"
-			xy:googleLink="@string/google_daxxmax"
 			xy:githubLink="@string/github_daxxmax"/>
 
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="David Hou"
 			xy:nameDev="chaosagent"
 			xy:twitterHandle=""
-			xy:googleLink="@string/google_chaosagent"
 			xy:githubLink="@string/github_chaosagent"/>
 
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="David Vidal"
 			xy:nameDev="David Vidal"
 			xy:twitterHandle="dorilife"
-			xy:googleLink="@string/google_dorilife"
 			xy:githubLink="@string/github_dorilife"/>
 
 		<com.android.settings.about.widgets.DeveloperPreference
@@ -60,21 +56,18 @@
 			android:title="psafx"
 			xy:nameDev="psafx"
 			xy:twitterHandle="psafx"
-			xy:googleLink="@string/google_psafx"
 			xy:githubLink="@string/github_psafx"/>
 
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="AirOne70"
 			xy:nameDev="AirOne"
 			xy:twitterHandle="airone70500"
-			xy:googleLink="@string/google_airone"
 			xy:githubLink="@string/github_airone"/>
 
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="Hieu Phan"
 			xy:nameDev="aznrice2k4"
 			xy:twitterHandle="aznrice2k4"
-			xy:googleLink="@string/google_aznrice2k4"
 			xy:githubLink="@string/github_aznrice2k4"/>
 
 	</PreferenceCategory>
