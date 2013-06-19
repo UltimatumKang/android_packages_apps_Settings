@@ -942,6 +942,20 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+    
+    <!-- Silent mode options. -->
+    <string-array name="silent_mode_entries">
+        <item>@string/silent_mode_off</item>
+        <item>@string/silent_mode_vibrate</item>
+        <item>@string/silent_mode_mute</item>
+    </string-array>
+
+    <!-- Values for Silent mode. Do not translate. -->
+    <string-array name="silent_mode_values" translatable="false">
+        <item>off</item>
+        <item>vibrate</item>
+        <item>mute</item>
+    </string-array>
 
     <!-- Performance settings -->
     <string-array name="pref_zram_size_entries">
