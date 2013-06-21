@@ -25,7 +25,7 @@ import android.app.ConnectionSettings;
 import android.app.Profile;
 import android.app.ProfileGroup;
 import android.app.ProfileManager;
-import android.app.RingModeSettings;
+import android.app.SilentModeSettings;
 import android.app.StreamSettings;
 import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothAdapter;
@@ -35,6 +35,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.net.wimax.WimaxHelper;
+import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -78,7 +79,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
 
     private ArrayList<ConnectionItem> mConnections;
 
-    private RingModeItem mRingMode;
+    private SilentModeItem mSilentMode;
 
     private AirplaneModeItem mAirplaneMode;
 
@@ -132,7 +133,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        if (deviceSupportsNfc(getActivity())) {
+        if (NfcAdapter.getDefaultAdapter(getActivity()) != null) {
             MenuItem nfc = menu.add(0, MENU_NFC_WRITE, 0, R.string.profile_write_nfc_tag)
                 .setIcon(R.drawable.ic_menu_nfc_writer_dark);
             nfc.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
@@ -190,7 +191,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
     }
 
     private void startWifiTrigger() {
-        final PreferenceActivity pa = (PreferenceActivity) getActivity();
+        final PreferenceDrawerActivity pa = (PreferenceDrawerActivity) getActivity();
         final String title = getResources().getString(R.string.profile_trigger_title_wifi,
                 mProfile.getName());
         final Bundle args = new Bundle();
@@ -217,24 +218,24 @@ public class ProfileConfig extends SettingsPreferenceFragment
         PreferenceGroup systemPrefs = (PreferenceGroup) prefSet.findPreference("profile_system_settings");
         if (systemPrefs != null) {
             systemPrefs.removeAll();
-            // Ring mode preference
-            if (mRingMode == null) {
-                mRingMode = new RingModeItem();
+            // Silent mode preference
+            if (mSilentMode == null) {
+                mSilentMode = new SilentModeItem();
             }
-            RingModeSettings rms = mProfile.getRingMode();
-            if (rms == null) {
-                rms = new RingModeSettings();
-                mProfile.setRingMode(rms);
+            SilentModeSettings sms = mProfile.getSilentMode();
+            if (sms == null) {
+                sms = new SilentModeSettings();
+                mProfile.setSilentMode(sms);
             }
-            mRingMode.mSettings = rms;
-            ProfileRingModePreference rmp = new ProfileRingModePreference(getActivity());
-            rmp.setRingModeItem(mRingMode);
-            rmp.setTitle(R.string.ring_mode_title);
-            rmp.setPersistent(false);
-            rmp.setSummary(getActivity());
-            rmp.setOnPreferenceChangeListener(this);
-            mRingMode.mCheckbox = rmp;
-            systemPrefs.addPreference(rmp);
+            mSilentMode.mSettings = sms;
+            ProfileSilentModePreference smp = new ProfileSilentModePreference(getActivity());
+            smp.setSilentModeItem(mSilentMode);
+            smp.setTitle(R.string.silent_mode_title);
+            smp.setPersistent(false);
+            smp.setSummary(getActivity());
+            smp.setOnPreferenceChangeListener(this);
+            mSilentMode.mCheckbox = smp;
+            systemPrefs.addPreference(smp);
 
             // Airplane mode preference
             if (mAirplaneMode == null) {
@@ -353,8 +354,8 @@ public class ProfileConfig extends SettingsPreferenceFragment
                     connection.mSettings.setOverride((Boolean) newValue);
                 }
             }
-        } else if (preference == mRingMode.mCheckbox) {
-            mRingMode.mSettings.setOverride((Boolean) newValue);
+        } else if (preference == mSilentMode.mCheckbox) {
+            mSilentMode.mSettings.setOverride((Boolean) newValue);
         } else if (preference == mAirplaneMode.mCheckbox) {
             mAirplaneMode.mSettings.setOverride((Boolean) newValue);
         } else if (preference == mNamePreference) {
@@ -451,12 +452,11 @@ public class ProfileConfig extends SettingsPreferenceFragment
         }
     }
 
-    static class RingModeItem {
-        String mLabel;
-        RingModeSettings mSettings;
-        ProfileRingModePreference mCheckbox;
+    static class SilentModeItem {
+        SilentModeSettings mSettings;
+        ProfileSilentModePreference mCheckbox;
 
-        public RingModeItem() {
+        public SilentModeItem() {
             // nothing to do
         }
     }
