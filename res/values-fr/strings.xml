@@ -1862,7 +1862,7 @@
     <string name="contributors">Collaborateurs</string>
     <string name="xylon">Xylon</string>
     <string name="xylon_website_title">Site web de la Rom</string>
-    <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
+    <string name="xylon_website_summary">Retrouvez les actualités et téléchargements de la Rom sur le site web officiel.</string>
 
     <string name="dark_settings_title">IU sombre</string>
     <string name="misc">Divers</string>
@@ -2049,7 +2049,7 @@
 
     <string name="app_security_title">Sécurité des applications</string>
     <string name="sms_security_check_limit_title">Limiter l\'émission de SMS</string>
-    <string name="sms_security_check_limit_summary">Afficher un message d\'alerte pour prevenir qu\'une application envoie des messages SMS trop fréquemment. Limite actuelle : %d messages en 15 minutes</string>
+    <string name="sms_security_check_limit_summary">Afficher un message d\'alerte pour prevenir qu\'une application envoie des messages SMS trop fréquemment. Limite actuelle : %d messages en 30 minutes</string>
     <string name="sms_security_check_limit_default">100 (Par défaut)</string>
 
     <string name="anonymous_statistics_title">Statistiques de la Rom</string>
@@ -2060,42 +2060,29 @@
     <string name="auto_brightness_adjust_button">Ajuster</string>
     <string name="auto_brightness_close_button">Fermer</string>
     <string name="auto_brightness_reset_button">Réinitialiser</string>
-    <string name="auto_brightness_split_dialog_title">Modifier le niveau de luminosité</string>
-    <string name="auto_brightness_level_dialog_title">Configurer les niveaux</string>
+    <string name="auto_brightness_split_dialog_title">Division du niveau de luminosité</string>
+    <string name="auto_brightness_level_dialog_title">Définir le niveau de lumière</string>
     <string name="auto_brightness_lux">Luminosité ambiante (lux)</string>
     <string name="auto_brightness_backlight">Luminosité de l\'écran (%)</string>
     <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux\u00A0?</string>
     <string name="auto_brightness_reset_confirmation">Tous les niveaux de luminosité seront réinitialisés à leurs réglages par défaut.</string>
     <string name="auto_brightness_split_lux_format">Position de coupure (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">Options de niveau de lumière</string>
-    <string name="auto_brightness_menu_edit_lux">Modifier plage de luminosité ambiante</string>
-    <string name="auto_brightness_menu_split">Modifier position de coupure</string>
+    <string name="auto_brightness_menu_edit">Modifier</string>
+    <string name="auto_brightness_menu_split">Diviser</string>
     <string name="auto_brightness_menu_remove">Supprimer</string>
-    <string name="auto_brightness_preview">Aperçu (courbe)</string>
-    <string name="auto_brightness_preview_dialog_title">Évolution de la luminosité</string>
+    <string name="auto_brightness_preview">Prévisualiser</string>
+    <string name="auto_brightness_preview_dialog_title">Aperçu de la courbe de luminosité</string>
     <string name="auto_brightness_help_dialog_title">Aide</string>
     <string name="auto_brightness_help_text"><b>Comment la luminosité est-elle calculée ?</b>
 \n\n
-The brightness curve is calculated by performing a <i>cubic spline interpolation</i>
-on a given number of <i>control points</i>. It\'s not a \'bucket-type\' calculation where
-screen brightness will stay constant for a specific range of ambient brightness. That way,
-small changes in ambient brightness do not cause a large jump in screen brightness; however,
-it can be a little hard to predict the exact consequences of changing control points.\n
-To help with that, a preview of the calculated curve can be examined. Please note that the
-preview shows the curve in <i>logarithmic</i> scale, so that all control points can be shown
-distinctively. When using a linear scale, it wouldn\'t be possible to distinguish the tendentially
-more important control points in the lower range of ambient brightness.
+La courbe de luminosité est calculée en effectuant l\'<i>interpolation d\'une courbe cubique</i> sur un certain nombre de <i>points de contrôle</i>. C\'est un calcul précis dans lequel la luminosité de l\'écran ne reste pas constante pour une plage déterminée de luminosité ambiante. De cette manière, les légers changements de luminosité ambiante ne provoquent pas de grands sauts de luminosité de l\'écran, néanmoins il est plus difficile de prédire les conséquences exactes de l\'évolution des points de contrôle.\n
+Pour vous aider, un aperçu de la courbe calculée peut être examiné. Noter que l\'aperçu montre une courbe avec une échelle <i>logarithmique</i>, de sorte que tous les points de contrôle peuvent être affichés distinctement. Lorsque vous utilisez une échelle linéaire, il n\'est pas possible de distinguer la tendance des points de contrôle les plus importants dans la fourchette basse de luminosité ambiante.
 \n\n
-<b>Comment éditer les courbes de luminosité ?</b>
+<b>Comment éditer la courbe de luminosité\u00A0?</b>
 \n\n
-Each line in the brightness list corresponds to one <i>control point</i> of the
-brightness curve. To edit the brightness level of the point, you can use the slider
-present in each line. The screen brightness will be changed accordingly while touching
-the slider to give a preview of the light level.\n
-Additional options are available by long-pressing a line. By selecting \'Ajuster\', you can
-both edit the ambient brightness level of the control point as well as manually input the
-desired screen brightness. Selecting \'Modifier\' allows you to to duplicate one line into
-two in order to insert additional control points. \'Supprimer\' deletes the selected line.
+Chaque ligne de la liste correspond à un <i>point de contrôle</i> de la courbe de luminosité. Pour modifier le niveau de luminosité d\'un point, vous pouvez utiliser le curseur présent sur chaque ligne. Lorsque vous toucherez le curseur, la luminosité de l\'écran sera modifiée en conséquence pour prévisualiser le niveau de lumière.\n
+Des options supplémentaires sont disponibles en appuyant longtemps sur une ligne. En sélectionnant \'Modifier\', vous pouvez modifier le niveau du point de contrôle de luminosité ambiante ou saisir manuellement la luminosité de l\'écran désirée. En sélectionnant \'Diviser\' vous pouvez séparer une ligne en deux afin d\'insérer des points de contrôle supplémentaires. Enfin, \'Supprimer\' efface la ligne sélectionnée.
     </string>
     <string name="auto_brightness_sensitivity_title">Sensibilité d\'ajustement</string>
     <string name="auto_brightness_sensitivity_verylow">Très petite</string>
@@ -2104,32 +2091,121 @@ two in order to insert additional control points. \'Supprimer\' deletes the sele
     <string name="auto_brightness_sensitivity_high">Haute</string>
     <string name="auto_brightness_sensitivity_veryhigh">Très haute</string>
     
-    <string name="power_notifications_category_title">Son dû au chargeur</string>
+    <string name="power_notifications_category_title">Son d\'alimentation</string>
     <string name="power_notifications_enable_title">Activé</string>
     <string name="power_notifications_enable_summary">Va émettre un son de notification lorsqu\'un chargeur sera branché/débranché</string>
     <string name="power_notifications_vibrate_title">Vibreur</string>
-    <string name="power_notifications_ringtone_title">Sonnerie émise</string>
-    <string name="power_notifications_ringtone_silent">Aucune</string>
-
-    <string name="animation_fade">S\'estomper</string>
-    <string name="animation_slide_right">Glissé à droite</string>
-    <string name="animation_slide_left">Glissé à gauche</string>
-    <string name="animation_slide_right_no_fade">Glissé à droite (sans s\'estomper)</string>
-    <string name="animation_slide_left_no_fade">Glissé à droite (sans s\'estomper)</string>
-    <string name="animation_slide_up">Glissé vers le bas</string>
-    <string name="animation_slide_down">Glissé vers le haut</string>
-    <string name="animation_default">Par défaut</string>
-    <string name="animation_translucent">Translucide</string>
-    <string name="animation_grow_shrink">S\'agrandir (haut)</string>
-    <string name="animation_grow_shrink_center">S\'agrandir (centre)</string>
-    <string name="animation_grow_shrink_bottom">S\'agrandir (bas)</string>
-    <string name="animation_grow_shrink_left">S\'agrandir (gauche)</string>
-    <string name="animation_grow_shrink_right">S\'agrandir (droite)</string>
+    <string name="power_notifications_ringtone_title">Son émis</string>
+    <string name="power_notifications_ringtone_silent">Silencieux</string>
 
     <string name="app_halo_label_black">Liste noire de HALO</string>
     <string name="app_halo_label_white">Liste blanche de HALO</string>
 
-    <string name="confirm_delete_apn">Cet APN va être supprimé.</string>
+    <string name="confirm_delete_apn">L\'APN va être supprimé.</string>
+
+    <string name="profiles_settings_title">Profils</string>
+    <string name="profiles_general_title">Général</string>
+    <string name="profiles_add">Ajouter</string>
+    <string name="profile_menu_delete">Supprimer</string>
+    <string name="profile_settings_title">Profil</string>
+    <string name="profile_empty_list_profiles_off">Activer le système de profils pour le personnaliser et l\'utiliser.</string>
+    <string name="add_profile_dialog_title">Créer un nouveau profil</string>
+    <string name="profile_name_title">Nom</string>
+    <string name="profile_profile_name_prompt">Saisir un nom pour le nouveau profil</string>
+    <string name="menu_new_profile">Nouveau profil</string>
+    <string name="menu_new_profile_summary">Ajouter et configurer un nouveau profil</string>
+    <string name="new_profile_name">&lt;nouveau profil&gt;</string>
+    <string name="rename_dialog_title">Renommer</string>
+    <string name="rename_dialog_message">Saisir un nouveau nom</string>
+    <string name="duplicate_profile_name">Ce profil existe déjà\u00A0!</string>
+    <string name="duplicate_appgroup_name">Ce groupe existe déjà\u00A0!</string>
+    <string name="profile_reset_title">Réinitialiser</string>
+    <string name="profile_reset_message">Supprimer tous les profils et groupes d\'applications et revenir à la configuration d\'origine\u00A0?</string>
+    <string name="profile_delete_confirm">Supprimer ce profil\u00A0?</string>
+    <string name="profile_app_delete_confirm">Supprimer cette application\u00A0?</string>
+    <string name="profile_cannot_delete">Vous ne pouvez pas supprimer le profil actif</string>
+    <string name="profile_connectionoverrides_title">Connexions</string>
+    <string name="profile_volumeoverrides_title">Volumes</string>
+    <string name="profile_vibratoroverrides_title">Vibrations</string>
+    <string name="connection_state_disabled">Inactif</string>
+    <string name="connection_state_enabled">Actif</string>
+    <string name="volume_override_summary">Actuel</string>
+    <string name="vibrator_state_disabled">Jamais</string>
+    <string name="vibrator_state_enabled">Toujours</string>
+    <string name="vibrator_state_silent">En mode silencieux</string>
+    <string name="profile_profiles_manage">Profils</string>
+    <string name="profile_profile_manage">Gérer le profil</string>
+    <string name="profile_applist_manage">Liste des applications</string>
+    <string name="profile_appgroups_manage">Groupes d\'applications</string>
+    <string name="profile_appgroup_manage">Gérer le groupe d\'applications</string>
+    <string name="profile_settings">Paramètres du Profil</string>
+    <string name="profile_name">Nom</string>
+    <string name="profile_trigger_connect">À la connexion</string>
+    <string name="profile_trigger_disconnect">À la déconnexion</string>
+    <string name="profile_trigger_notrigger">Pas de déclenchement</string>
+    <string name="sound_mode">Mode de notification</string>
+    <string name="ringer_mode">Sonnerie</string>
+    <string name="lights_mode">LED</string>
+    <string name="vibrate_mode">Vibreur</string>
+    <string name="choose_soundtone">Son de notification</string>
+    <string name="choose_ringtone">Choix de la sonnerie</string>
+    <string name="silent_mode_title">Mode de son</string>
+    <string name="ring_mode_title">Mode de son</string>
+    <string name="ring_mode_normal">Normal</string>
+    <string name="ring_mode_vibrate">Vibreur</string>
+    <string name="ring_mode_mute">Muet</string>
+    <string name="soundtone_title">Son de notification</string>
+    <string name="profile_appgroups_title">Groupes d\'applications</string>
+    <string name="profile_applist_title">Applications</string>
+    <string name="profile_new_appgroup">Nouveau groupe d\'applications</string>
+    <string name="profile_delete_appgroup">Supprimer ce groupe d\'applications</string>
+    <string name="profile_appgroup_name_prompt">Saisir le nom du nouveau groupe</string>
+    <string name="profile_appgroup_name_title">Nom</string>
+    <string name="profile_add_app">Ajouter application</string>
+    <string name="profile_delete_app">Retirer application</string>
+    <string name="profile_choose_app">Choisir une application</string>
+    <string name="profile_settings_header">Paramètres des Profils</string>
+    <string name="profile_system_settings_title">Paramètres système</string>
+    <string name="profile_lockmode_title">Mode de verrouillage</string>
+    <string name="profile_lockmode_default">Par défaut</string>
+    <string name="profile_lockmode_insecure">Non sécurisé</string>
+    <string name="profile_lockmode_disabled">Désactivé</string>
+    <string name="profile_lockmode_default_summary">Conserver les paramètres système</string>
+    <string name="profile_lockmode_insecure_summary">Écran de verrouillage non sécurisé</string>
+    <string name="profile_lockmode_disabled_summary">Écran de verrouillage désactivé</string>
+    <string name="profile_airplanemode_title">Mode avion</string>
+    <string name="profile_disable_screen_lock_summary">Désactive l\'écran de verrouillage lorsque ce profil est actif</string>
+    <string name="vibrator_type_ringer">Appels</string>
+    <string name="vibrator_type_notification">Notifications</string>
+    <string name="possibleButtons">Boutons possibles</string>
+    <string name="toggleWifi">Wi-Fi</string>
+    <string name="toggleWifiAp">Partage Wi-Fi</string>
+    <string name="toggleBluetooth">Bluetooth</string>
+    <string name="toggleGPS">GPS</string>
+    <string name="toggleData">Données mobile</string>
+    <string name="toggleSync">Synchronisation</string>
+    <string name="toggle2g3g">Mode réseau</string>
+    <string name="toggleSound">Son</string>
+    <string name="toggleBrightness">Luminosité</string>
+    <string name="toggleAutoRotate">Rotation automatique</string>
+    <string name="toggleScreenTimeout">Extinction écran</string>
+    <string name="toggleAirplane">Mode Avion</string>
+    <string name="toggleFlashlight">Torche</string>
+    <string name="toggleLockScreen">Verrouillage</string>
+    <string name="toggleWimax">WiMax</string>
+    <string name="toggleNfc">NFC</string>
+    <string name="profile_trigger_title_wifi">Déclenchement Wi-Fi pour <xliff:g id="profile">%s</xliff:g></string>
+    <string name="profile_trigger_configure">Configurer le déclenchement</string>
+    <string name="profile_trigger_wifi">Déclenchements Wi-Fi</string>
+    <string name="profile_write_nfc_tag">Écrire sur les tags NFC</string>
+    <string name="profile_write_touch_tag">Toucher le tag pour écrire</string>
+    <string name="profile_write_success">Tag écrit avec succès</string>
+    <string name="profile_write_failed">L\'écriture a échouée\u00A0!</string>
+    <string name="profile_selected">Profil sélectionné : %1$s</string>
+    <string name="profile_nfc_text">Écrire un profil sur un tag NFC permet de le relier avec celui-ci. Lors du deuxième contact ce profil sera sélectionné.</string>
+    <string name="profile_unknown_nfc_tag">Profil inconnu</string>
+    <string name="profile_add_nfc_text">Ce tag NFC ne se réfère à aucun profil. Le relier à un profil existant permettra à l\'avenir de le sélectionner.</string>
+    <string name="profile_select">Sélectionner un profil</string>
 
     <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
