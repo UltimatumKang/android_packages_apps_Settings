@@ -1873,7 +1873,7 @@
 
     <!-- Customisation -->
     <string name="other_cat">기타 설정</string>
-    <string name="xylon_extras">XY 설정</string>
+    <string name="xylon_extras">uTool</string>
     <string name="lockscreen_stub">잠금 화면</string>
     <string name="misc">기타</string>
 
@@ -2017,9 +2017,7 @@
  
     <!-- Performance Settings : Warning dialog  -->
     <string name="performance_settings_warning_title">경고</string>
-    <string name="performance_settings_warning">여기 포함되 있는 설정들은 안정성 저하, 충돌, 데이터 손실 또는 하드웨어 손상등을 야기할 가능성이 있습니다.\n\n이 설정들을 수정후 발생하는 버그들에 대해서는 리포트를 삼가해 주시길 바랍니다.
-
-폰이 고장났다고 하여 XY팀월들에게 뭐라 하시지 마십시오.</string>
+    <string name="performance_settings_warning">여기 포함되 있는 설정들은 안정성 저하, 충돌, 데이터 손실 또는 하드웨어 손상등을 야기할 가능성이 있습니다.\n\n이 설정들을 수정후 발생하는 버그들에 대해서는 리포트를 삼가해 주시길 바랍니다.</string>
 
     <!-- Performance Settings : Processor settings title -->
     <string name="processor_title">프로세서</string>
@@ -2163,6 +2161,28 @@
     <string name="auto_brightness_menu_edit_lux">측정된 밝기 범위</string>
     <string name="auto_brightness_menu_split">분할됨</string>
     <string name="auto_brightness_menu_remove">제거</string>
+
+    <string name="permissions_settings_title">권한 설정</string>
+
+
+    <!-- Safe headset volume restore checkbox -->
+    <string name="safe_headset_volume_title">안전한 헤드셋 볼륨</string>
+    <string name="safe_headset_volume_summary">처음 헤드셋을 장착했을 때 큰 소리를 방지합니다.</string>
+
+    <!-- Category title for power sound notification specific Settings.
+         [CHAR LIMIT=40] -->
+    <string name="power_notifications_category_title">전원 연결 알림음</string>
+
+    <!-- Sound settings, power notifications enable/disable, setting check box label -->
+    <string name="power_notifications_enable_title">활성화</string>
+    <!-- Sound settings, power notifications enable/disable, summary -->
+    <string name="power_notifications_enable_summary">전원 연결 상태가 변경될 때 알림음이 나게 합니다.</string>
+    <!-- Sound settings, power notifications vibrate enable/disable, setting check box label -->
+    <string name="power_notifications_vibrate_title">진동</string>
+    <!-- Sound settings, power notifications ringtone selection, preference label -->
+    <string name="power_notifications_ringtone_title">알림음</string>
+    <!-- Sound settings, power notifications label for ringtone == none -->
+    <string name="power_notifications_ringtone_silent">무음</string>
 
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 
