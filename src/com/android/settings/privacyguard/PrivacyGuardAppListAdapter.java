@@ -28,7 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.settings.R;
-import com.android.settings.cyanogenmod.privacyguard.PrivacyGuardManager.AppInfo;
+import com.android.settings.privacyguard.PrivacyGuardManager.AppInfo;
 
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
