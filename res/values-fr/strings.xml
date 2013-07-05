@@ -2213,6 +2213,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
     <string name="privacy_guard_switch_label">Activer la protection des données</string>
     <string name="privacy_guard_dlg_title">Activer la protection des données\u00A0?</string>
     <string name="privacy_guard_dlg_text">Lorsque la protection des données est activée, les applications n\'ont pas accès à vos données personnelles telles que les contacts, les messages ou le journal d\'appels.</string>
+    <string name="privacy_guard_dlg_system_app_text">En activant la Protection sur une appli. pré-installée, elle n\'aura pas accès à vos données personnelles. Cela peut avoir des effets indésirables.</string>
     <string name="privacy_guard_default_title">Protection des données</string>
     <string name="privacy_guard_default_summary">Activer par défaut la protection des données pour les applications nouvellement installées</string>
     <string name="privacy_guard_manager_title">Protection des données</string>
@@ -2221,8 +2222,8 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
     <string name="privacy_guard_filter_does_not_match">Aucune appli. avec des permissions inquiétantes n\'est installée</string>
     <string name="privacy_guard_help_title">Aide</string>
     <string name="privacy_guard_reset_title">Réinitialiser</string>
-    <string name="privacy_guard_help_text">Ici vous pouvez choisir pour quelles applications la Protection des données doit être activée par un simple appui sur elles. Les applications sélectionnées n\'auront pas accès à vos données personnelles telles que les contacts, les messages ou le journal d\'appels. Un appui long sur une appli. affichera ses détails.\n\nLes appli. système ne sont pas affichées par défaut. Si vous voulez les afficher pour gérer leurs permissions, utiliser l\'option appropriée dans le menu.</string>
-    <string name="privacy_guard_manager_show_system_apps">Afficher les appli. système</string>
+    <string name="privacy_guard_help_text">Ici vous pouvez choisir pour quelles applications la Protection des données doit être activée par un simple appui sur elles. Les applications sélectionnées n\'auront pas accès à vos données personnelles telles que les contacts, les messages ou le journal d\'appels. Un appui long sur une appli. affichera ses détails.\n\nLes appli. pré-installées ne sont pas affichées par défaut. Si vous voulez les afficher pour gérer leurs permissions, utiliser l\'option appropriée dans le menu.</string>
+    <string name="privacy_guard_manager_show_system_apps">Afficher les appli. pré-installées</string>
     <string name="privacy_guard_manager_filter_permissions">Filtre des permissions</string>
     <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
