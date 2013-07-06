@@ -63,6 +63,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_WIFI_DISPLAY = "wifi_display";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
+    private static final String KEY_HOME_WAKE = "pref_home_wake";
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
 
@@ -79,6 +80,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private DisplayManager mDisplayManager;
 
     private WarnedListPreference mFontSizePref;
+    private CheckBoxPreference mHomeWake;
     private CheckBoxPreference mVolumeWake;
     private CheckBoxPreference mNotificationPulse;
     private PreferenceScreen mDisplayRotationPreference;
@@ -158,6 +160,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 == WifiDisplayStatus.FEATURE_STATE_UNAVAILABLE) {
             getPreferenceScreen().removePreference(mWifiDisplayPreference);
             mWifiDisplayPreference = null;
+        }
+
+        mHomeWake = (CheckBoxPreference) findPreference(KEY_HOME_WAKE);
+        if (mHomeWake != null) {
+            if (!getResources().getBoolean(R.bool.config_show_homeWake)) {
+                mWakeUpOptions.removePreference(mHomeWake);
+            } else {
+                mHomeWake.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.HOME_WAKE_SCREEN, 1) == 1);
+            }
         }
 
         mVolumeWake = (CheckBoxPreference) findPreference(KEY_VOLUME_WAKE);
@@ -404,7 +416,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mVolumeWake) {
+        if (preference == mHomeWake) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HOME_WAKE_SCREEN,
+                    mHomeWake.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mVolumeWake) {
             Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,
                     mVolumeWake.isChecked() ? 1 : 0);
             return true;
