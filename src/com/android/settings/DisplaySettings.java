@@ -162,28 +162,39 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mWifiDisplayPreference = null;
         }
 
+        // Start the wake-up category handling
+        boolean removeWakeupCategory = true;
+        PreferenceCategory wakeupCategory = (PreferenceCategory)
+                    findPreference(KEY_WAKEUP_CATEGORY);
+        // Home button wake
         mHomeWake = (CheckBoxPreference) findPreference(KEY_HOME_WAKE);
         if (mHomeWake != null) {
             if (!getResources().getBoolean(R.bool.config_show_homeWake)) {
-                mWakeUpOptions.removePreference(mHomeWake);
+                wakeupCategory.removePreference(mHomeWake);
             } else {
                 mHomeWake.setChecked(Settings.System.getInt(resolver,
                         Settings.System.HOME_WAKE_SCREEN, 1) == 1);
+                removeWakeupCategory = false;
             }
         }
 
+        // Volume rocker wake
         mVolumeWake = (CheckBoxPreference) findPreference(KEY_VOLUME_WAKE);
         if (mVolumeWake != null) {
             if (!getResources().getBoolean(R.bool.config_show_volumeRockerWake)
-                    && !Utils.hasVolumeRocker(getActivity())) {
-                getPreferenceScreen().removePreference(mVolumeWake);
-                getPreferenceScreen().removePreference((PreferenceCategory) findPreference(KEY_WAKEUP_CATEGORY));
+                    || !Utils.hasVolumeRocker(getActivity())) {
+                wakeupCategory.removePreference(mVolumeWake);
             } else {
                 mVolumeWake.setChecked(Settings.System.getInt(resolver,
                         Settings.System.VOLUME_WAKE_SCREEN, 0) == 1);
+                removeWakeupCategory = false;
             }
         }
 
+        // Remove the wake-up category if neither of the two items above are enabled
+        if (removeWakeupCategory) {
+            getPreferenceScreen().removePreference(wakeupCategory);
+        }
     }
 
     private void updateDisplayRotationPreferenceDescription() {
