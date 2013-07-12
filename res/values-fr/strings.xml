@@ -362,12 +362,15 @@
     <string name="unlock_set_unlock_pin_summary" msgid="907878650556383388">"Sécurité moyenne à élevée"</string>
     <string name="unlock_set_unlock_password_title" msgid="8775603825675090937">"Mot de passe"</string>
     <string name="unlock_set_unlock_password_summary" msgid="8856220848940929546">"Sécurité élevée"</string>
+    <string name="unlock_set_unlock_gesture_title">Geste</string>
+    <string name="unlock_set_unlock_gesture_summary">"Sécurité faible, expérimental"</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="2120729867788851674">"Désactivé par admin., règles chiffrement ou stockage des identifiants"</string>
     <string name="unlock_set_unlock_mode_off" msgid="5881952274566013651">"Aucun"</string>
     <string name="unlock_set_unlock_mode_none" msgid="5660014471997663139">"Faire glisser"</string>
     <string name="unlock_set_unlock_mode_biometric_weak" msgid="3008473624490350142">"Face Unlock"</string>
     <string name="unlock_set_unlock_mode_pattern" msgid="7837270780919299289">"Schéma"</string>
     <string name="unlock_set_unlock_mode_pin" msgid="3541326261341386690">"Code PIN"</string>
+    <string name="unlock_set_unlock_mode_gesture">"Geste"</string>
     <string name="unlock_set_unlock_mode_password" msgid="1203938057264146610">"Mot de passe"</string>
     <string name="unlock_disable_lock_title" msgid="1427036227416979120">"Désactiver le verrouillage de l\'écran"</string>
     <string name="unlock_disable_lock_pattern_summary" msgid="6801602880568869201">"Supprimer le schéma de déverrouillage"</string>
@@ -990,9 +993,11 @@
     <string name="settings_safetylegal_activity_loading" msgid="8059022597639516348">"Chargement…"</string>
     <string name="lockpassword_choose_your_password_header" msgid="8624900666929394990">"Choisir votre mot de passe"</string>
     <string name="lockpassword_choose_your_pattern_header" msgid="6949761069941694050">"Choisissez votre schéma"</string>
+    <string name="lockpassword_choose_your_gesture_header">Choisissez votre geste</string>
     <string name="lockpassword_choose_your_pin_header" msgid="7598849519816138302">"Choisir votre code PIN"</string>
     <string name="lockpassword_confirm_your_password_header" msgid="6308478184889846633">"Confirmer le mot de passe"</string>
     <string name="lockpassword_confirm_your_pattern_header" msgid="7543433733032330821">"Confirmez votre schéma"</string>
+    <string name="lockpassword_confirm_your_gesture_header">Confirmez votre geste</string>
     <string name="lockpassword_confirm_your_pin_header" msgid="49038294648213197">"Confirmer votre code PIN"</string>
     <string name="lockpassword_confirm_passwords_dont_match" msgid="6850677112663979120">"Les mots de passe ne correspondent pas."</string>
     <string name="lockpassword_confirm_pins_dont_match" msgid="4757532830594400147">"Les codes PIN ne correspondent pas."</string>
@@ -1000,6 +1005,7 @@
     <string name="lockpassword_password_set_toast" msgid="4875050283108629383">"Le mot de passe a été défini."</string>
     <string name="lockpassword_pin_set_toast" msgid="6011826444725291475">"Le code PIN a été défini."</string>
     <string name="lockpassword_pattern_set_toast" msgid="6867259621331406236">"Le schéma a été défini."</string>
+    <string name="lockpassword_gesture_set_toast">"Le geste a été défini."</string>
     <string name="lock_settings_title" msgid="335025124489630932">"Sécurité de l\'écran"</string>
     <string name="lockpattern_change_lock_pattern_label" msgid="5679630792003440352">"Modifier le schéma"</string>
     <string name="lockpattern_change_lock_pin_label" msgid="266707138486731661">"Modifier le code PIN de déverrouillage"</string>
@@ -1028,6 +1034,30 @@
     <string name="lockpattern_too_many_failed_confirmation_attempts_header" msgid="819903817323783498">"Trop de tentatives échouées !"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts_footer" msgid="6759029360597122873">"Réessayer dans <xliff:g id="NUMBER">%d</xliff:g> secondes."</string>
     <string name="activity_not_found" msgid="5551664692991605325">"L\'application n\'est pas installée sur votre téléphone."</string>
+    <string name="lockgesture_change_lock_pattern_label">"Modifier le geste"</string>
+    <string name="lockgesture_change_lock_pin_label">"Modifier le code PIN de déverrouillage"</string>
+    <string name="lockgesture_need_to_unlock">"Confirmer le geste enregistré"</string>
+    <string name="lockgesture_need_to_unlock_wrong">"Réessayer :"</string>
+    <string name="lockgesture_recording_intro_header">"Dessiner un geste de déverrouillage :"</string>
+    <string name="lockgesture_recording_intro_footer">"Appuyez sur Menu pour obtenir de l\'aide."</string>
+    <string name="lockgesture_recording_inprogress">"Ôtez le doigt lorsque vous avez terminé."</string>
+    <string name="lockgesture_pattern_entered_header">"Geste enregistré."</string>
+    <string name="lockgesture_need_to_confirm">"Redessinez le geste pour confirmer :"</string>
+    <string name="lockgesture_pattern_confirmed_header">"Votre nouveau geste de déverrouillage :"</string>
+    <string name="lockgesture_confirm_button_text">"Confirmer"</string>
+    <string name="lockgesture_restart_button_text">"Redessiner"</string>
+    <string name="lockgesture_retry_button_text">"Réessayer"</string>
+    <string name="lockgesture_continue_button_text">"Continuer"</string>
+    <string name="lockgesture_settings_title">"Geste de déverrouillage"</string>
+    <string name="lockgesture_settings_enable_title">"Geste obligatoire"</string>
+    <string name="lockgesture_settings_enable_summary">"Dessiner un geste pour déverrouiller l\'écran"</string>
+    <string name="lockgesture_settings_enable_visible_pattern_title">"Faire apparaître le geste"</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">"Verr. auto MARCHE-ARRÊT"</string>
+    <string name="lockgesture_settings_choose_lock_pattern">"Créer un geste"</string>
+    <string name="lockgesture_settings_change_lock_pattern">"Modifier le geste de déverrouillage"</string>
+    <string name="lockgesture_settings_help_how_to_record">"Comment dessiner un geste de déverrouillage :"</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_header">"Trop de tentatives échouées !"</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">"Réessayer dans <xliff:g id="number">%d</xliff:g> secondes."</string>
     <string name="manageapplications_settings_title" msgid="7041951105633616745">"Gérer les applications"</string>
     <string name="manageapplications_settings_summary" msgid="1794401500935451259">"Gérer et supprimer les applications installées"</string>
     <string name="applications_settings" msgid="1721442176406964682">"Applications"</string>
@@ -2040,6 +2070,8 @@
     <string name="media_scanner_on_boot_enabled">Activé</string>
     <string name="media_scanner_on_boot_ask">Toujours demander (notification)</string>
     <string name="media_scanner_on_boot_disabled">Désactivé</string>
+    <string name="storage_rescan_media">Analyser les médias du volume de stockage</string>
+    <string name="storage_rescan_media_complete">Analyse terminée</string>
 
     <string name="pref_wifi_disable_hdcp_title">Éviter la négociation HDCP</string>
     <string name="pref_wifi_disable_hdcp_summary">Essayer cette option si vous pouvez vous connecter mais qu\'il n\'y a aucune sortie</string>
@@ -2215,17 +2247,17 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
     <string name="privacy_guard_switch_label">Activer la protection des données</string>
     <string name="privacy_guard_dlg_title">Activer la protection des données\u00A0?</string>
     <string name="privacy_guard_dlg_text">Lorsque la protection des données est activée, les applications n\'ont pas accès à vos données personnelles telles que les contacts, les messages ou le journal d\'appels.</string>
-    <string name="privacy_guard_dlg_system_app_text">En activant la Protection sur une appli. pré-installée, elle n\'aura pas accès à vos données personnelles. Cela peut avoir des effets indésirables.</string>
+    <string name="privacy_guard_dlg_system_app_text">Lorsque la protection des données est activée pour une application système, cette application ne sera pas en mesure d\'accéder ou de fournir des données personnelles. Cela peut provoquer des dysfonctionnements avec d\'autres applications.</string>
     <string name="privacy_guard_default_title">Protection des données</string>
-    <string name="privacy_guard_default_summary">Activer par défaut la protection des données pour les applications nouvellement installées</string>
+    <string name="privacy_guard_default_summary">Activer par défaut la protection des données pour les applications nouvellement installées.</string>
     <string name="privacy_guard_manager_title">Protection des données</string>
-    <string name="privacy_guard_manager_summary">Gérer quelles sont les applications qui ont accès à vos données personnelles</string>
-    <string name="privacy_guard_no_user_apps">Aucune application n\'est installée</string>
-    <string name="privacy_guard_filter_does_not_match">Aucune appli. avec des permissions inquiétantes n\'est installée</string>
+    <string name="privacy_guard_manager_summary">Contrôler l\'accès des applications à vos données personnelles</string>
+    <string name="privacy_guard_no_user_apps">Pas d\'application installée</string>
+    <string name="privacy_guard_filter_does_not_match">Aucune application demandant des autorisations sensibles n\'est installée</string>
     <string name="privacy_guard_help_title">Aide</string>
     <string name="privacy_guard_reset_title">Réinitialiser</string>
-    <string name="privacy_guard_help_text">Ici vous pouvez choisir pour quelles applications la Protection des données doit être activée par un simple appui sur elles. Les applications sélectionnées n\'auront pas accès à vos données personnelles telles que les contacts, les messages ou le journal d\'appels. Un appui long sur une appli. affichera ses détails.\n\nLes appli. pré-installées ne sont pas affichées par défaut. Si vous voulez les afficher pour gérer leurs permissions, utiliser l\'option appropriée dans le menu.</string>
-    <string name="privacy_guard_manager_show_system_apps">Afficher les appli. pré-installées</string>
-    <string name="privacy_guard_manager_filter_permissions">Filtre des permissions</string>
+    <string name="privacy_guard_help_text">Dans cet écran, vous pouvez sélectionner pour quelles applications la protection des données est activée. Les applications sélectionnées ne seront pas en mesure d\'accéder à vos données personnelles telles que les contacts, les messages ou le journal d\'appels. Obtenez les détails de l\'application par un appui long sur celle-ci.\n\nPar défaut, les applications du système ne sont pas affichées. Si vous voulez les afficher ou ne filtrer que les applications qui demandent une autorisation d\'accès à des données personnelles, sélectionnez les options respectives dans le menu.</string>
+    <string name="privacy_guard_manager_show_system_apps">Afficher les applications système</string>
+    <string name="privacy_guard_manager_filter_permissions">Filtre de permissions</string>
     <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
