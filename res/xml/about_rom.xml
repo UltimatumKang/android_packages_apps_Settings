@@ -69,9 +69,10 @@
             uxy:gplus="@string/psafx_gplus" />
 
         <com.android.settings.about.widgets.DeveloperPreference
-            uxy:twitter="aznrice2k4"
-            uxy:devUrl="@string/aznrice2k4_profile"
-            uxy:gplus="@string/aznrice2k4_gplus" />
+            uxy:twitter="aznrice"
+            uxy:devUrl="@string/aznrice_profile"
+            uxy:gplus="@string/aznrice_gplus"
+            uxy:donate="@string/aznrice_donate" />
 
         <com.android.settings.about.widgets.DeveloperPreference
             uxy:twitter="root_ad"
