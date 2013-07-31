@@ -79,6 +79,12 @@
             uxy:devUrl="@string/andreas_profile"
             uxy:gplus="@string/andreas_gplus"
             uxy:donate="@string/andreas_donate" />
+            
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="oblikas"
+            uxy:devUrl="@string/oblikas_profile"
+            uxy:gplus="@string/oblikas_gplus" 
+            uxy:donate="@string/oblikas_donate" />
 
     </PreferenceCategory>
 </PreferenceScreen>
