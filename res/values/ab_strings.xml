@@ -36,6 +36,10 @@
 <string name="oblikas_gplus">https://plus.google.com/103529702812248563284/about</string>
 <string name="oblikas_donate">http://forum.xda-developers.com/donatetome.php?u=4870917</string>
 
+<string name="bytecodeme_profile">https://lh3.googleusercontent.com/-QefqF21AULk/UgCVx_g_8qI/AAAAAAAABBU/Fn6ZYqsjDOU/s808-no/Pikachu.png</string>
+<string name="bytecodeme_gplus">https://plus.google.com/103570326282906944661/about</string>
+<string name="bytecodeme_donate">http://forum.xda-developers.com/donatetome.php?u=4581171</string>
+
     <!-- Credits to (Still in WIP...) -->
 
 </resources>

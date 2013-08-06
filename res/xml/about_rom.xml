@@ -86,5 +86,11 @@
             uxy:gplus="@string/oblikas_gplus" 
             uxy:donate="@string/oblikas_donate" />
 
-    </PreferenceCategory>
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="BytecodeMe"
+            uxy:devUrl="@string/bytecodeme_profile"
+            uxy:gplus="@string/bytcodeme_gplus" 
+            uxy:donate="@string/bytecodeme_donate" />
+ 
+   </PreferenceCategory>
 </PreferenceScreen>
