@@ -89,7 +89,7 @@
         <com.android.settings.about.widgets.DeveloperPreference
             uxy:twitter="BytecodeMe"
             uxy:devUrl="@string/bytecodeme_profile"
-            uxy:gplus="@string/bytcodeme_gplus" 
+            uxy:gplus="@string/bytecodeme_gplus" 
             uxy:donate="@string/bytecodeme_donate" />
  
    </PreferenceCategory>
